@@ -56,6 +56,18 @@ Seguindo a necessidade de armazenamento dos dados, de escalabidade e facilidade 
 
 Seguindo o modelo sugerido construído utilizando as ferramentas da Amazon, teríamos a seguinte distribuição de pastas dentro do bucket no Amazon S3:
 
-![Structure_Datalake](./structure_datalake.png)
+<img src="./structure_datalake.png" width="300" height="400" /> 
 
+* RAW: Diretório onde serão armazenados os arquivos brutos vindos dos sistemas. Podem ser recebidos em diversos formatos mas se possível já convertido em parquet.
 
+* CURATED: Diretório onde serão armazenados os arquivos com algum tipo de modificação ou conversão.
+  * CONVERTED: Diretório onde serão armazenados os arquivos brutos convertidos que não puderam ser convertidos durante a extração do source.
+  * ENRICHED: Diretório onde serão armazenados os arquivos com cruzamento de dados ou modelos analíticos. Aqui podem ser armazenados os arquivos trusted para análise.
+  
+* LAB ZONE: Diretório utilizado para a realização de testes e análises exploratórias pelos cientistas de dados.
+
+* TRANSIENT: Diretório para armazenar arquivos temporários.
+
+Dentro de cada diretório deve haver separações por em base, ano, mês e dia, devido ao controle de entrada de arquivos e separações por bases. Além disso, é recomendável que o nome dos sejam no formato YYYYmmddHHMMSS-nomedoarquivo.parquet dependendo do número de partições.
+
+Exemplo: \<nome-do-bucket\>/raw/order/2020/08/05/20200805000000-order.parquet
