@@ -42,3 +42,20 @@ Seguindo a necessidade de armazenamento dos dados, de escalabidade e facilidade 
 
 ![Sugestion_Datalake](./sugestion_datalake.png)
 
+* Como pode ser observado na imagem, como os arquivos estão sendo retirados de um S3 da Amazon, resolvi manter a mesma estrutura cloud para o armazenamento dos arquivos e construção do Data Lake, porém seria possível implementar a mesma ideia em outras plataformas cloud, como por exemplo, utilizando o Azure Data Lake.
+
+* Além disso, os arquivos Trusted, dependendo da estrutura da empresa com relação a ferramentas de visualização de dados, podem ser armazenado também em um Data Warehouse, no caso da Amazon utilizando o Redshift e no caso da Azure utilizando o Azure Data Warehouse.
+
+* O armazenamento dos arquivos em formato parquet foi utilizada pela necessidade de estruturação dos dados e pelo formato ser otimizado para leitura. Além disso, a maioria das ferramentas de visualização conseguem utilizar o formato para criação de dashboards e análises.
+
+* Todas as ferramentas sugeridas são facilmente escaláveis e conseguem ser integradas com outros sistemas, como por exemplo, o Databricks que consegue ler arquivos de diversas fontes e manipulá-los utilizando diversas linguagens de programação.
+
+* Outras ferramentas de ETL podem ser utilizadas, como o Amazon Glue ou o Azure Data Factory, dependendo da necessidade e recursos da plataforma.
+
+### Estrutura do Data Lake
+
+Seguindo o modelo sugerido construído utilizando as ferramentas da Amazon, teríamos a seguinte distribuição de pastas dentro do bucket no Amazon S3:
+
+![Structure_Datalake](./structure_datalake.png)
+
+
