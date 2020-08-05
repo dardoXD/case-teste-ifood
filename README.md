@@ -125,4 +125,9 @@ Para gerar as bases trusted, primeiro será necessário construir o código faze
   * Muitas funções já foram implementadas e podem ser utilizadas para facilitar essa manipulação, principalmente, para leitura e escrita dos Datasets.
 * O retorno do método run deve ser um dataframe spark no formato que será gravado no Data Lake para análise.
 
+Para executar o fluxo criado é só executar o Notebook RunFlow da pasta Executables passando o seguinte parâmetro:
+* **flow**: Nome do fluxo que deverá ser executado
+
+Após a execução, a base estará carregada na pasta Enriched do Data Lake.
+
 Outras informações e documentações podem ser encontradas nos Notebooks do Databricks.
