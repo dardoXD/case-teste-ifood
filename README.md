@@ -37,3 +37,8 @@ Process semi-structured data and build a datalake that provides efficient storag
 ## Resolução
 
 ### Arquitetura Sugerida
+
+Seguindo a necessidade de armazenamento dos dados, de escalabidade e facilidade de leitura, a arquitetura abaixo é a sugerida:
+
+![Sugestion_Datalake](./sugestion_datalake.png)
+
